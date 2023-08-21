@@ -15,7 +15,7 @@ export async function getAllOrders(
   res: Response,
   next: NextFunction
 ): Promise<void> {
-  const data = await getOrders(req.body.user_id);
+  const data = await getOrders(req.params.user_id);
   res.json(data);
 }
 

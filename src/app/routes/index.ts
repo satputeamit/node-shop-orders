@@ -5,7 +5,7 @@ import { addNewOrder, deleteOrderById, getAllOrders, updateOrderRecord } from ".
 const router = Router();
 
 router.post("/addorder", addNewOrder);
-router.get("/orders", getAllOrders);
+router.get("/orders/:user_id", getAllOrders);
 router.delete("/deleteorder/:id", deleteOrderById);
 router.patch("/updateorder/:id", updateOrderRecord);
 
