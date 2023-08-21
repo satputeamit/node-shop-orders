@@ -1,0 +1,41 @@
+# ADD USER
+POST http://localhost:3002/addproduct
+Content-Type: application/json
+
+{
+    "name":"Laptop",
+    "description":"16GB RAM, 1TB SSD, RTX3060",
+    "amount":125000,    
+    "pictures":["NA"],
+    "status":1,
+    "user_id":"e8734c48-aa94-4143-8374-75d92eca4bd2"   
+}
+
+###
+
+# GET Products list
+GET http://localhost:3002/products
+
+###
+#Delete 
+DELETE http://localhost:3002/deleteproduct/64dcb92b899633050854cb4c
+Content-Type: application/json
+
+{
+    "user_id":"e8734c48-aa94-4143-8374-75d92eca4bd2"
+}
+###
+
+#update
+
+PATCH  http://localhost:3002/updateproduct/64dcbbfe5510beacacbe6e11
+Content-Type: application/json
+
+{
+    "name":"Laptop",
+    "description":"16GB RAM, 1TB SSD, RTX2070TI",
+    "amount":70000,    
+    "pictures":["NA"],
+    "status":1,
+    "user_id":"e8734c48-aa94-4143-8374-75d92eca4bd2"   
+}
